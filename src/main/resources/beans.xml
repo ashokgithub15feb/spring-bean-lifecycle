@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    
+   <!--    awareinterfaces-->
+    <bean id="awareBean" class="com.nineleaps.domain.AwareBeanImpl">
+    </bean>
+   
+   <bean id = "bookBeanPost" class="com.nineleaps.domain.BookBean">
+       <property name = "bookName" value= "Gone with the Wind"></property>
+   </bean>
+   <bean id = "bookBeanPostProcessor" class = "com.nineleaps.domain.BookBeanPostProcessor">		
+   	</bean>
+   	<bean id = "bookBeanPostProcessor2" class = "com.nineleaps.domain.BookBeanPostProcessor2">		
+   	</bean>
+   	
+   	
+   	
+   	 <bean id = "bookBean" class = "com.nineleaps.domain.Book">
+   		 <property name = "bookName" value= "Believe in Yourself"></property>
+   	 </bean>
+   	
+   		
+    <bean id = "bookCustomBean" class = "com.nineleaps.domain.BookCustomBean" 
+    	  init-method="customInit" destroy-method="customDestroy">
+   		 <property name = "bookName" value= "Believe in Yourself"></property>
+   	</bean>
+   		
+</beans>
